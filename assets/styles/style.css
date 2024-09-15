@@ -16,13 +16,14 @@ body {
 header.navbar-container {
     width: 100%;
     display: flex;
-    padding: 1rem;
+    /* padding: 1rem; */
     align-items: center;
     justify-content: space-between;
 }
 
 .logo img {
     width: 200px;
+    padding: 1rem;
 }
 
 nav.nav-list ul {
@@ -33,9 +34,10 @@ nav.nav-list ul {
     list-style-type: none;
 }
 
-/* nav.nav-list ul li {
-    width: 150px;
-} */
+nav.nav-list ul li {
+    padding: 1rem;
+    transition: all 0.5s ease;
+}
 
 nav.nav-list ul li:hover {
     background-color: #d7d7d7;
@@ -69,8 +71,8 @@ nav.nav-list ul li.messages {
 
 nav.nav-list ul li a span.notif {
     position: absolute;
-    top: -0.2rem;
-    left: 2.5rem;
+    top: 0.7rem;
+    left: 3.3rem;
     width: 15px;
     height: 15px;
     font-size: 0.8rem;
@@ -153,7 +155,7 @@ nav.nav-list ul li a span.notif {
 /* Small devices (576px dan di bawahnya) */
 @media screen and (max-width: 576px) {
     .logo img {
-        width: 100px;
+        width: 150px;
     }
 
     header.navbar-container span.menu {
