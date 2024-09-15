@@ -1,0 +1,183 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header.navbar-container {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 200px;
+}
+
+nav.nav-list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+/* nav.nav-list ul li {
+    width: 150px;
+} */
+
+nav.nav-list ul li:hover {
+    background-color: #d7d7d7;
+}
+
+nav.nav-list ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #1d1d1d;
+}
+
+nav.nav-list ul li a i {
+    font-size: 2rem;
+}
+
+header.navbar-container span.menu {
+    display: none;
+}
+
+nav.nav-list ul li a img {
+    width: 2rem;
+    border-radius: 50%;
+}
+
+nav.nav-list ul li.messages {
+    position: relative;
+}
+
+nav.nav-list ul li a span.notif {
+    position: absolute;
+    top: -0.2rem;
+    left: 2.5rem;
+    width: 15px;
+    height: 15px;
+    font-size: 0.8rem;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    background-color: red;
+}
+
+@media screen and (max-width: 992px) {
+    header.navbar-container {
+        width: 100%;
+        padding-block: 1rem;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    header.navbar-container span.menu {
+        font-size: 3rem;
+        padding: 0.8rem 0.5rem;
+        z-index: 10;
+    }
+
+    nav.nav-list ul.mobile {
+        opacity: 1;
+        width: 60%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    nav.nav-list ul {
+        position: absolute;
+        margin: 0;
+        width: 0;
+        height: 100vh;
+        padding: 8rem 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        opacity: 0;
+        transition: all 0.5s;
+        box-shadow: -5px 0px 19px 0px rgba(0, 0, 0, 0.3);
+        background-color: #f8f8f8;
+    }
+
+    header.navbar-container span.menu {
+        display: block;
+    }
+
+    nav.nav-list ul li {
+        padding: 0.8rem 1rem;
+    }
+
+    nav.nav-list ul li a {
+        flex-direction: row;
+        gap: 1rem;
+        font-size: 1.3rem;
+    }
+
+    nav.nav-list ul li a span.notif {
+        top: 0.6rem;
+        left: 2rem;
+    }
+
+    nav.nav-list ul li a img {
+        width: 3rem;
+    }
+
+    nav.nav-list ul li a i {
+        font-size: 2rem;
+    }
+}
+
+/* Small devices (576px dan di bawahnya) */
+@media screen and (max-width: 576px) {
+    .logo img {
+        width: 100px;
+    }
+
+    header.navbar-container span.menu {
+        font-size: 2rem;
+    }
+
+    nav.nav-list ul.mobile {
+        width: 80%;
+    }
+
+    nav.nav-list ul li {
+        padding: 0.8rem 1rem;
+    }
+
+    nav.nav-list ul li a {
+        font-size: 1rem;
+    }
+
+    nav.nav-list ul li a img {
+        width: 3rem;
+        border-radius: 50%;
+    }
+
+    nav.nav-list ul li a i {
+        font-size: 2rem;
+    }
+}
