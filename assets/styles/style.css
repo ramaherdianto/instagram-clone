@@ -68,6 +68,10 @@ nav.nav-list ul li a {
     color: #1d1d1d;
 }
 
+nav.nav-list ul li a p {
+    text-align: center;
+}
+
 nav.nav-list ul li a i {
     font-size: 1.7rem;
 }
@@ -77,7 +81,7 @@ header.navbar-container span.menu {
 }
 
 nav.nav-list ul li a img {
-    width: 2rem;
+    width: 1.9rem;
     border-radius: 50%;
 }
 
@@ -136,6 +140,7 @@ article.user-story ul li a {
     align-items: center;
     flex-direction: column;
     gap: 0.5rem;
+    color: #1d1d1d;
     font-size: 0.8rem;
 }
 
@@ -202,6 +207,14 @@ article.user-posting-card div.user-posting-action {
 
 div.user-posting-action span {
     font-size: 1.5rem;
+}
+div.user-posting-action span {
+    cursor: pointer;
+}
+
+div.user-posting-action span:hover i.bx-heart {
+    transition: all 0.3s ease;
+    color: red;
 }
 
 article.user-posting-card div.user-posting-caption {
@@ -398,6 +411,7 @@ footer span {
     }
 
     nav.nav-list ul li {
+        width: 100%;
         padding: 0.8rem 1rem;
     }
 
@@ -413,7 +427,7 @@ footer span {
     }
 
     nav.nav-list ul li a img {
-        width: 3rem;
+        width: 3.5rem;
     }
 
     nav.nav-list ul li a i {
