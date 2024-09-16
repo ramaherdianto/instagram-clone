@@ -1,9 +1,9 @@
-const menuToggle = document.querySelector('.menu');
+const menuMobile = document.querySelector('.menu');
 const nav = document.querySelector('nav ul');
 const header = document.querySelector('.navbar-container');
 const username = document.querySelector('#user-username');
 
-const userInput = prompt('Masukkan username instagram kamu !');
+const userInput = prompt('Masukkan nama panggilanmu !');
 if (userInput) {
     username.textContent = userInput;
 } else {
@@ -11,9 +11,13 @@ if (userInput) {
 }
 
 window.addEventListener('scroll', () => {
-    header.classList.toggle('shadow', window.scrollY > 50);
+    if (window.scrollY > 50) {
+        header.classList.add('shadow');
+    } else {
+        header.classList.remove('shadow');
+    }
 });
 
-menuToggle.addEventListener('click', function () {
+menuMobile.addEventListener('click', function () {
     nav.classList.toggle('mobile');
 });
