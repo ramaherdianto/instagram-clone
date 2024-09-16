@@ -341,6 +341,7 @@ footer span {
     line-height: 1.5rem;
 }
 
+/* Large devices (1200px dan di bawahnya) */
 @media screen and (max-width: 1200px) {
     main {
         display: flex;
@@ -361,6 +362,7 @@ footer span {
     }
 }
 
+/* Medium devices (992px dan di bawahnya) */
 @media screen and (max-width: 992px) {
     header.navbar-container {
         width: 100%;
@@ -391,7 +393,7 @@ footer span {
     }
 
     nav.nav-list ul {
-        position: fixed;
+        position: absolute;
         margin: 0;
         width: 0;
         height: 100vh;
@@ -408,6 +410,7 @@ footer span {
 
     header.navbar-container span.menu {
         display: block;
+        position: sticky;
     }
 
     nav.nav-list ul li {
@@ -441,10 +444,6 @@ footer span {
 
     div.content article.user-story {
         padding-left: 0;
-    }
-
-    article.user-story ul {
-        overflow-x: scroll;
     }
 
     aside {
